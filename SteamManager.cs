@@ -46,6 +46,7 @@ namespace BL3SteamDownpatcher {
       { Depot.Dandelion, "OakGame/AdditionalContent/Dandelion/Paks/Dandelion.pak" },
       { Depot.Hibiscus, "OakGame/AdditionalContent/Hibiscus/Paks/Hibiscus.pak" },
       { Depot.Geranium, "OakGame/AdditionalContent/Geranium/Paks/Geranium.pak" },
+      { Depot.Alisma, "OakGame/AdditionalContent/Alisma/Paks/Alisma.pak" }
     };
 
     // All instances of this are defined in `SteamManagerVersions.cs`

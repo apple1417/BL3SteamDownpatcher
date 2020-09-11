@@ -153,13 +153,12 @@
       // 
       this.DLC4Check.Anchor = System.Windows.Forms.AnchorStyles.None;
       this.DLC4Check.AutoSize = true;
-      this.DLC4Check.Enabled = false;
-      this.DLC4Check.Location = new System.Drawing.Point(264, 5);
+      this.DLC4Check.Location = new System.Drawing.Point(266, 5);
       this.DLC4Check.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
       this.DLC4Check.Name = "DLC4Check";
-      this.DLC4Check.Size = new System.Drawing.Size(53, 17);
+      this.DLC4Check.Size = new System.Drawing.Size(50, 17);
       this.DLC4Check.TabIndex = 3;
-      this.DLC4Check.Text = "DLC4";
+      this.DLC4Check.Text = "Krieg";
       this.DLC4Check.UseVisualStyleBackColor = true;
       this.DLC4Check.CheckedChanged += new System.EventHandler(this.DLCCheck_CheckedChanged);
       // 

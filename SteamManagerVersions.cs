@@ -268,6 +268,45 @@ namespace BL3SteamDownpatcher {
             "Engine/Binaries/Win64/CrashReportClient.exe"
           } }
         }
+      },
+
+      new VersionInfo() {
+        Name = "Krieg DLC",
+        ProductVersion = "OAK-PATCHWIN641-118",
+
+        Manifests = new Dictionary<Depot, ulong>() {
+          { Depot.Exe, 565172304258303085 },
+          { Depot.Content, 6377891187593103666 },
+          { Depot.Dandelion, 9116600370569954686 },
+          { Depot.Hibiscus, 132348831915272916 },
+          { Depot.Geranium, 350750707932598048 },
+          { Depot.Alisma, 5627198090468988485 }
+        },
+
+        FilesToAdd = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Content, new HashSet<string>() {
+            "OakGame/Content/Paks/pakchunk0-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk1-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk2-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk3-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk4-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk5-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk6-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk7-WindowsNoEditor_8_P.pak",
+            "OakGame/Content/Paks/pakchunk12-WindowsNoEditor_6_P.pak",
+            "OakGame/Content/Paks/pakchunk85-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk86-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk87-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk88-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk89-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk90-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_9_P.pak",
+          } },
+          { Depot.Alisma, new HashSet<string>() {
+            "OakGame/AdditionalContent/Alisma/Movies/Video_Ali_Intro.mp4",
+            "OakGame/AdditionalContent/Alisma/Paks/Alisma.pak",
+          } }
+        }
       }
     };
   }
