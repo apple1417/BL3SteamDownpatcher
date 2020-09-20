@@ -338,14 +338,25 @@ namespace BL3SteamDownpatcher {
           }
         }
 
-        Process ddProc = Process.Start(
-          "dotnet",
-          $"\"{ddPath}\""
-          + $" -user \"{username}\" -remember-password"
-          + $" -app {APP_ID} -depot {depot_id} -manifest {manifest_id}"
-          + $" -dir \"{cachePath}\" -filelist \"{filelist}\" -validate"
-        );
-        ddProc.WaitForExit();
+        Process ddProc = null;
+        try {
+          ddProc = Process.Start(
+            "dotnet",
+            $"\"{ddPath}\""
+            + $" -user \"{username}\" -remember-password"
+            + $" -app {APP_ID} -depot {depot_id} -manifest {manifest_id}"
+            + $" -dir \"{cachePath}\" -filelist \"{filelist}\" -validate"
+          );
+          ddProc.WaitForExit();
+        } catch (FileNotFoundException) {
+          MessageBox.Show(
+            $"Unable to launch Depot Downloader. Downpatching will be aborted",
+            "Error",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error
+          );
+          return true;
+        }
 
         if (ddProc.ExitCode != 0) {
           // I really wish there was a good way for me to log the console output somewhere
