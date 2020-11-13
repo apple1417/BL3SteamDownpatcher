@@ -26,6 +26,8 @@ namespace BL3SteamDownpatcher {
     Hibiscus = 8,
     Geranium = 16,
     Alisma = 32,
+    Ixora = 64,
+    DLC6 = 128,
 
     Base = Exe | Content
   }
@@ -40,13 +42,15 @@ namespace BL3SteamDownpatcher {
       { Depot.Hibiscus, 1232257 },
       { Depot.Geranium, 1233060 },
       { Depot.Alisma, 1233061 },
+      { Depot.Ixora, 1361830 }
     };
 
     private static readonly Dictionary<Depot, string> DLC_INSTALLED_FILES = new Dictionary<Depot, string>() {
       { Depot.Dandelion, "OakGame/AdditionalContent/Dandelion/Paks/Dandelion.pak" },
       { Depot.Hibiscus, "OakGame/AdditionalContent/Hibiscus/Paks/Hibiscus.pak" },
       { Depot.Geranium, "OakGame/AdditionalContent/Geranium/Paks/Geranium.pak" },
-      { Depot.Alisma, "OakGame/AdditionalContent/Alisma/Paks/Alisma.pak" }
+      { Depot.Alisma, "OakGame/AdditionalContent/Alisma/Paks/Alisma.pak" },
+      { Depot.Ixora, "OakGame/AdditionalContent/Ixora/Paks/Ixora.pak" }
     };
 
     // All instances of this are defined in `SteamManagerVersions.cs`

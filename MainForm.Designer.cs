@@ -38,6 +38,8 @@
       this.CurrentVersionTable = new System.Windows.Forms.TableLayoutPanel();
       this.CurrentVersionLabel = new System.Windows.Forms.Label();
       this.DLCTable = new System.Windows.Forms.TableLayoutPanel();
+      this.DLC6Check = new System.Windows.Forms.CheckBox();
+      this.DLC5Check = new System.Windows.Forms.CheckBox();
       this.DownpatchTable = new System.Windows.Forms.TableLayoutPanel();
       this.HotfixButton = new System.Windows.Forms.Button();
       this.PathsTable = new System.Windows.Forms.TableLayoutPanel();
@@ -104,7 +106,7 @@
       // PatchProgressBar
       // 
       this.PatchProgressBar.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.PatchProgressBar.Location = new System.Drawing.Point(3, 169);
+      this.PatchProgressBar.Location = new System.Drawing.Point(3, 194);
       this.PatchProgressBar.Name = "PatchProgressBar";
       this.PatchProgressBar.Size = new System.Drawing.Size(327, 21);
       this.PatchProgressBar.TabIndex = 1;
@@ -112,9 +114,9 @@
       // 
       // DLC1Check
       // 
-      this.DLC1Check.Anchor = System.Windows.Forms.AnchorStyles.None;
+      this.DLC1Check.Anchor = System.Windows.Forms.AnchorStyles.Left;
       this.DLC1Check.AutoSize = true;
-      this.DLC1Check.Location = new System.Drawing.Point(9, 5);
+      this.DLC1Check.Location = new System.Drawing.Point(3, 5);
       this.DLC1Check.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
       this.DLC1Check.Name = "DLC1Check";
       this.DLC1Check.Size = new System.Drawing.Size(64, 17);
@@ -125,9 +127,9 @@
       // 
       // DLC2Check
       // 
-      this.DLC2Check.Anchor = System.Windows.Forms.AnchorStyles.None;
+      this.DLC2Check.Anchor = System.Windows.Forms.AnchorStyles.Left;
       this.DLC2Check.AutoSize = true;
-      this.DLC2Check.Location = new System.Drawing.Point(90, 5);
+      this.DLC2Check.Location = new System.Drawing.Point(114, 5);
       this.DLC2Check.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
       this.DLC2Check.Name = "DLC2Check";
       this.DLC2Check.Size = new System.Drawing.Size(69, 17);
@@ -138,9 +140,9 @@
       // 
       // DLC3Check
       // 
-      this.DLC3Check.Anchor = System.Windows.Forms.AnchorStyles.None;
+      this.DLC3Check.Anchor = System.Windows.Forms.AnchorStyles.Left;
       this.DLC3Check.AutoSize = true;
-      this.DLC3Check.Location = new System.Drawing.Point(178, 5);
+      this.DLC3Check.Location = new System.Drawing.Point(225, 5);
       this.DLC3Check.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
       this.DLC3Check.Name = "DLC3Check";
       this.DLC3Check.Size = new System.Drawing.Size(59, 17);
@@ -151,9 +153,9 @@
       // 
       // DLC4Check
       // 
-      this.DLC4Check.Anchor = System.Windows.Forms.AnchorStyles.None;
+      this.DLC4Check.Anchor = System.Windows.Forms.AnchorStyles.Left;
       this.DLC4Check.AutoSize = true;
-      this.DLC4Check.Location = new System.Drawing.Point(266, 5);
+      this.DLC4Check.Location = new System.Drawing.Point(3, 30);
       this.DLC4Check.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
       this.DLC4Check.Name = "DLC4Check";
       this.DLC4Check.Size = new System.Drawing.Size(50, 17);
@@ -200,24 +202,54 @@
       // 
       // DLCTable
       // 
-      this.DLCTable.ColumnCount = 4;
-      this.DLCTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-      this.DLCTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-      this.DLCTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-      this.DLCTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+      this.DLCTable.AutoSize = true;
+      this.DLCTable.ColumnCount = 3;
+      this.DLCTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+      this.DLCTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+      this.DLCTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+      this.DLCTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
       this.DLCTable.Controls.Add(this.DLC1Check, 0, 0);
       this.DLCTable.Controls.Add(this.DLC2Check, 1, 0);
       this.DLCTable.Controls.Add(this.DLC3Check, 2, 0);
-      this.DLCTable.Controls.Add(this.DLC4Check, 3, 0);
+      this.DLCTable.Controls.Add(this.DLC6Check, 2, 1);
+      this.DLCTable.Controls.Add(this.DLC5Check, 1, 1);
+      this.DLCTable.Controls.Add(this.DLC4Check, 0, 1);
       this.DLCTable.Dock = System.Windows.Forms.DockStyle.Fill;
       this.DLCTable.Location = new System.Drawing.Point(0, 112);
       this.DLCTable.Margin = new System.Windows.Forms.Padding(0);
       this.DLCTable.Name = "DLCTable";
-      this.DLCTable.RowCount = 1;
-      this.DLCTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-      this.DLCTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-      this.DLCTable.Size = new System.Drawing.Size(333, 25);
+      this.DLCTable.RowCount = 2;
+      this.DLCTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+      this.DLCTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
+      this.DLCTable.Size = new System.Drawing.Size(333, 50);
       this.DLCTable.TabIndex = 5;
+      // 
+      // DLC6Check
+      // 
+      this.DLC6Check.Anchor = System.Windows.Forms.AnchorStyles.Left;
+      this.DLC6Check.AutoSize = true;
+      this.DLC6Check.Enabled = false;
+      this.DLC6Check.Location = new System.Drawing.Point(225, 30);
+      this.DLC6Check.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+      this.DLC6Check.Name = "DLC6Check";
+      this.DLC6Check.Size = new System.Drawing.Size(53, 17);
+      this.DLC6Check.TabIndex = 5;
+      this.DLC6Check.Text = "DLC6";
+      this.DLC6Check.UseVisualStyleBackColor = true;
+      this.DLC6Check.CheckedChanged += new System.EventHandler(this.DLCCheck_CheckedChanged);
+      // 
+      // DLC5Check
+      // 
+      this.DLC5Check.Anchor = System.Windows.Forms.AnchorStyles.Left;
+      this.DLC5Check.AutoSize = true;
+      this.DLC5Check.Location = new System.Drawing.Point(114, 30);
+      this.DLC5Check.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+      this.DLC5Check.Name = "DLC5Check";
+      this.DLC5Check.Size = new System.Drawing.Size(78, 17);
+      this.DLC5Check.TabIndex = 4;
+      this.DLC5Check.Text = "Arms Race";
+      this.DLC5Check.UseVisualStyleBackColor = true;
+      this.DLC5Check.CheckedChanged += new System.EventHandler(this.DLCCheck_CheckedChanged);
       // 
       // DownpatchTable
       // 
@@ -227,7 +259,7 @@
       this.DownpatchTable.Controls.Add(this.VersionsCombo, 0, 0);
       this.DownpatchTable.Controls.Add(this.DownpatchButton, 1, 0);
       this.DownpatchTable.Dock = System.Windows.Forms.DockStyle.Fill;
-      this.DownpatchTable.Location = new System.Drawing.Point(0, 137);
+      this.DownpatchTable.Location = new System.Drawing.Point(0, 162);
       this.DownpatchTable.Margin = new System.Windows.Forms.Padding(0);
       this.DownpatchTable.Name = "DownpatchTable";
       this.DownpatchTable.RowCount = 1;
@@ -320,22 +352,22 @@
       this.OuterTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 333F));
       this.OuterTable.Controls.Add(this.DownpatchTable, 0, 4);
       this.OuterTable.Controls.Add(this.DLCTable, 0, 3);
-      this.OuterTable.Controls.Add(this.PatchProgressBar, 0, 6);
+      this.OuterTable.Controls.Add(this.PatchProgressBar, 0, 5);
       this.OuterTable.Controls.Add(this.CurrentVersionTable, 0, 2);
       this.OuterTable.Controls.Add(this.PathsTable, 0, 0);
       this.OuterTable.Controls.Add(this.ExtrasTable, 0, 1);
       this.OuterTable.Location = new System.Drawing.Point(12, 12);
       this.OuterTable.Margin = new System.Windows.Forms.Padding(9);
       this.OuterTable.Name = "OuterTable";
-      this.OuterTable.RowCount = 7;
+      this.OuterTable.RowCount = 6;
       this.OuterTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
       this.OuterTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
       this.OuterTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
       this.OuterTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
       this.OuterTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
       this.OuterTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-      this.OuterTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
-      this.OuterTable.Size = new System.Drawing.Size(333, 193);
+      this.OuterTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+      this.OuterTable.Size = new System.Drawing.Size(333, 218);
       this.OuterTable.TabIndex = 0;
       // 
       // ExtrasTable
@@ -372,7 +404,7 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.AutoSize = true;
       this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-      this.ClientSize = new System.Drawing.Size(354, 214);
+      this.ClientSize = new System.Drawing.Size(357, 242);
       this.Controls.Add(this.OuterTable);
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -386,6 +418,7 @@
       this.PathsTable.ResumeLayout(false);
       this.PathsTable.PerformLayout();
       this.OuterTable.ResumeLayout(false);
+      this.OuterTable.PerformLayout();
       this.ExtrasTable.ResumeLayout(false);
       this.ExtrasTable.PerformLayout();
       this.ResumeLayout(false);
@@ -418,6 +451,8 @@
     private System.Windows.Forms.TableLayoutPanel PathsTable;
     private System.Windows.Forms.TableLayoutPanel OuterTable;
     private System.Windows.Forms.TableLayoutPanel ExtrasTable;
+    private System.Windows.Forms.CheckBox DLC6Check;
+    private System.Windows.Forms.CheckBox DLC5Check;
   }
 }
 

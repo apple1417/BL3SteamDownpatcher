@@ -9,6 +9,7 @@ namespace BL3SteamDownpatcher {
       { Depot.Exe, new HashSet<string>() {
         "OakGame/Binaries/Win64/Borderlands3.exe",
       } },
+      // TODO: This one stopped being updated, don't technically need to grab it, it's only a few mb though
       { Depot.Content, new HashSet<string>() {
         "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
       } }
@@ -305,6 +306,85 @@ namespace BL3SteamDownpatcher {
           { Depot.Alisma, new HashSet<string>() {
             "OakGame/AdditionalContent/Alisma/Movies/Video_Ali_Intro.mp4",
             "OakGame/AdditionalContent/Alisma/Paks/Alisma.pak",
+          } }
+        }
+      },
+
+      new VersionInfo() {
+        Name = "Arms Race P1",
+        ProductVersion = "OAK-PATCHWIN640-149",
+
+        Manifests = new Dictionary<Depot, ulong>() {
+          { Depot.Exe, 4791711210192274705 },
+          { Depot.Content, 9220698735985578478 },
+          { Depot.Dandelion, 2224808001001900276 },
+          { Depot.Hibiscus, 132348831915272916 },
+          { Depot.Geranium, 2109884503557559104 },
+          { Depot.Alisma, 5627198090468988485 },
+          { Depot.Ixora, 5818922910671489918 }
+        },
+
+        FilesToAdd = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Content, new HashSet<string>() {
+            "OakGame/Content/Paks/pakchunk0-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk1-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk2-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk3-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk4-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk5-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk6-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk7-WindowsNoEditor_9_P.pak",
+            "OakGame/Content/Paks/pakchunk8-WindowsNoEditor_6_P.pak",
+            "OakGame/Content/Paks/pakchunk9-WindowsNoEditor_2_P.pak",
+            "OakGame/Content/Paks/pakchunk10-WindowsNoEditor_4_P.pak",
+            "OakGame/Content/Paks/pakchunk12-WindowsNoEditor_7_P.pak",
+            "OakGame/Content/Paks/pakchunk37-WindowsNoEditor_0_P.pak",
+            "OakGame/Content/Paks/pakchunk85-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk86-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk87-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk88-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk89-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk90-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_10_P.pak"
+          } },
+          { Depot.Ixora, new HashSet<string>() {
+            "OakGame/AdditionalContent/Ixora/Paks/Ixora.pak"
+          } }
+        }
+      },
+
+      new VersionInfo() {
+        Name = "Arms Race P2",
+        ProductVersion = "OAK-PATCHWIN64-127",
+
+        Manifests = new Dictionary<Depot, ulong>() {
+          { Depot.Exe, 5571769405703134722 },
+          { Depot.Content, 7353255475058564268 },
+          { Depot.Dandelion, 2224808001001900276 },
+          { Depot.Hibiscus, 132348831915272916 },
+          { Depot.Geranium, 158003333842542987 },
+          { Depot.Alisma, 5627198090468988485 },
+          { Depot.Ixora, 988244885201248028 }
+        },
+
+        FilesToAdd = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Content, new HashSet<string>() {
+            "OakGame/Content/Paks/pakchunk0-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk1-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk3-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk4-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk5-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk17-WindowsNoEditor_0_P.pak",
+            "OakGame/Content/Paks/pakchunk37-WindowsNoEditor_1_P.pak",
+            "OakGame/Content/Paks/pakchunk51-WindowsNoEditor_0_P.pak",
+            "OakGame/Content/Paks/pakchunk52-WindowsNoEditor_0_P.pak",
+            "OakGame/Content/Paks/pakchunk85-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk86-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk87-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk88-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk89-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk90-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_11_P.pak"
           } }
         }
       }
