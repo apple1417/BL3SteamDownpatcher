@@ -1,21 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Security.Policy;
 
 namespace BL3SteamDownpatcher {
   static partial class SteamManager {
     // There's an explanation of these categories work in SwitchVersion
-
-    private static Dictionary<Depot, HashSet<string>> FilesToAlwaysReplace = new Dictionary<Depot, HashSet<string>>() {
-      { Depot.Exe, new HashSet<string>() {
-        "OakGame/Binaries/Win64/Borderlands3.exe",
-      } },
-      // TODO: This one stopped being updated, don't technically need to grab it, it's only a few mb though
-      { Depot.Content, new HashSet<string>() {
-        "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
-      } }
-    };
-
-    private static List<VersionInfo> AllVersionInfo = new List<VersionInfo>() {
+    private static readonly List<VersionInfo> AllVersionInfo = new List<VersionInfo>() {
       new VersionInfo() {
         Name = "Crossplay",
         ProductVersion = "OAK-PATCHWIN64-49",
@@ -44,6 +32,15 @@ namespace BL3SteamDownpatcher {
             "OakGame/AdditionalContent/Dandelion/Movies/Video_ThePlan_Phase02.mp4",
             "OakGame/AdditionalContent/Dandelion/Movies/Video_ThePlan_Phase03.mp4",
             "OakGame/AdditionalContent/Dandelion/Paks/Dandelion.pak",
+          } }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } },
+          { Depot.Content, new HashSet<string>() {
+            "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
           } }
         }
       },
@@ -78,7 +75,11 @@ namespace BL3SteamDownpatcher {
         },
 
         FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } },
           { Depot.Content, new HashSet<string>() {
+            "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
             "OakGame/Content/Paks/pakchunk0-WindowsNoEditor_5_P.pak",
             "OakGame/Content/Paks/pakchunk1-WindowsNoEditor_5_P.pak",
             "OakGame/Content/Paks/pakchunk3-WindowsNoEditor_4_P.pak",
@@ -136,7 +137,11 @@ namespace BL3SteamDownpatcher {
         },
 
         FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } },
           { Depot.Content, new HashSet<string>() {
+            "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
             "OakGame/Content/Movies/Mini_Marcus_Intro.mp4",
           } },
           { Depot.Hibiscus, new HashSet<string>() {
@@ -178,6 +183,15 @@ namespace BL3SteamDownpatcher {
             "OakGame/Content/Paks/pakchunk89-WindowsNoEditor_6_P.pak",
             "OakGame/Content/Paks/pakchunk90-WindowsNoEditor_6_P.pak",
             "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_6_P.pak",
+          } }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } },
+          { Depot.Content, new HashSet<string>() {
+            "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
           } }
         }
       },
@@ -226,6 +240,15 @@ namespace BL3SteamDownpatcher {
             "OakGame/AdditionalContent/Geranium/Movies/GER-Intro.mp4",
             "OakGame/AdditionalContent/Geranium/Paks/Geranium.pak",
           } }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } },
+          { Depot.Content, new HashSet<string>() {
+            "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
+          } }
         }
       },
 
@@ -263,6 +286,13 @@ namespace BL3SteamDownpatcher {
             "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_8_P.pak",
           } }
         },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } }
+        },
+
         FilesToDelete = new Dictionary<Depot, HashSet<string>>() {
           { Depot.Content, new HashSet<string>() {
             "Engine/Programs/CrashReportClient/Content/Paks/CrashReportClient.pak",
@@ -307,7 +337,13 @@ namespace BL3SteamDownpatcher {
             "OakGame/AdditionalContent/Alisma/Movies/Video_Ali_Intro.mp4",
             "OakGame/AdditionalContent/Alisma/Paks/Alisma.pak",
           } }
-        }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } }
+        },
       },
 
       new VersionInfo() {
@@ -350,7 +386,13 @@ namespace BL3SteamDownpatcher {
           { Depot.Ixora, new HashSet<string>() {
             "OakGame/AdditionalContent/Ixora/Paks/Ixora.pak"
           } }
-        }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } }
+        },
       },
 
       new VersionInfo() {
@@ -386,7 +428,55 @@ namespace BL3SteamDownpatcher {
             "OakGame/Content/Paks/pakchunk90-WindowsNoEditor_11_P.pak",
             "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_11_P.pak"
           } }
-        }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } }
+        },
+      },
+
+      new VersionInfo() {
+        Name = "The Big Sad Patch",
+        ProductVersion = "OAK-PATCHWIN640-172",
+
+        Manifests = new Dictionary<Depot, ulong>() {
+          { Depot.Exe, 5810392720910730831 },
+          { Depot.Content, 9115761061575575949 },
+          { Depot.Dandelion, 9116600370569954686 },
+          { Depot.Hibiscus, 132348831915272916 },
+          { Depot.Geranium, 350750707932598048 },
+          { Depot.Alisma, 5627198090468988485 },
+          { Depot.Ixora, 988244885201248028 }
+        },
+
+        FilesToAdd = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Content, new HashSet<string>() {
+            "OakGame/Content/Paks/pakchunk0-WindowsNoEditor_13_P.pak",
+            "OakGame/Content/Paks/pakchunk1-WindowsNoEditor_13_P.pak",
+            "OakGame/Content/Paks/pakchunk3-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk4-WindowsNoEditor_13_P.pak",
+            "OakGame/Content/Paks/pakchunk5-WindowsNoEditor_13_P.pak",
+            "OakGame/Content/Paks/pakchunk6-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk7-WindowsNoEditor_10_P.pak",
+            "OakGame/Content/Paks/pakchunk9-WindowsNoEditor_3_P.pak",
+            "OakGame/Content/Paks/pakchunk12-WindowsNoEditor_8_P.pak",
+            "OakGame/Content/Paks/pakchunk85-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk86-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk87-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk88-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk89-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk90-WindowsNoEditor_12_P.pak",
+            "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_12_P.pak"
+          } }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } }
+        },
       }
     };
   }

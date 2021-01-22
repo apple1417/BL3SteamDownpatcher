@@ -1,20 +1,13 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Runtime.CompilerServices;
-using System.Security.Policy;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Schema;
 
 namespace BL3SteamDownpatcher {
   [Flags]
@@ -303,8 +296,6 @@ namespace BL3SteamDownpatcher {
           addFiles(info.FilesToReplace, AllVersionInfo[idx - 1]);
         }
       }
-
-      addFiles(FilesToAlwaysReplace, AllVersionInfo[newIdx]);
 
       foreach (string file in GetAllRemovedDLCFiles(newDLC)) {
         filesToAdd.Remove(file);
