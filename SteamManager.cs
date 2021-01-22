@@ -414,6 +414,7 @@ namespace BL3SteamDownpatcher {
         foreach (string file in entry.Value) {
           string src = Path.Combine(cachePath, file);
           string dst = Path.Combine(baseBL3Path, file);
+          Directory.CreateDirectory(Path.GetDirectoryName(dst));
           File.Copy(src, dst, true);
           incrementBar();
         }
