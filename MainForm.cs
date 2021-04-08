@@ -126,7 +126,7 @@ namespace BL3SteamDownpatcher {
         DLC3Check.Checked = CurrentDLC.HasFlag(Depot.Geranium);
         DLC4Check.Checked = CurrentDLC.HasFlag(Depot.Alisma);
         DLC5Check.Checked = CurrentDLC.HasFlag(Depot.Ixora);
-        DLC6Check.Checked = CurrentDLC.HasFlag(Depot.DLC6);
+        DLC6Check.Checked = CurrentDLC.HasFlag(Depot.Ixora2);
 
         string name = SteamManager.GetVersionName(version);
         CurrentVersionLabel.ForeColor = Color.Black;
@@ -145,7 +145,7 @@ namespace BL3SteamDownpatcher {
         DLC3Check.Enabled = supported.HasFlag(Depot.Geranium);
         DLC4Check.Enabled = supported.HasFlag(Depot.Alisma);
         DLC5Check.Enabled = supported.HasFlag(Depot.Ixora);
-        DLC6Check.Enabled = supported.HasFlag(Depot.DLC6);
+        DLC6Check.Enabled = supported.HasFlag(Depot.Ixora2);
       }
     }
 
@@ -156,7 +156,7 @@ namespace BL3SteamDownpatcher {
       dlc |= DLC3Check.Checked ? Depot.Geranium : Depot.None;
       dlc |= DLC4Check.Checked ? Depot.Alisma : Depot.None;
       dlc |= DLC5Check.Checked ? Depot.Ixora : Depot.None;
-      dlc |= DLC6Check.Checked ? Depot.DLC6 : Depot.None;
+      dlc |= DLC6Check.Checked ? Depot.Ixora2 : Depot.None;
       return dlc;
     }
 

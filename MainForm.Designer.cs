@@ -228,13 +228,12 @@
       // 
       this.DLC6Check.Anchor = System.Windows.Forms.AnchorStyles.Left;
       this.DLC6Check.AutoSize = true;
-      this.DLC6Check.Enabled = false;
       this.DLC6Check.Location = new System.Drawing.Point(225, 30);
       this.DLC6Check.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
       this.DLC6Check.Name = "DLC6Check";
-      this.DLC6Check.Size = new System.Drawing.Size(53, 17);
+      this.DLC6Check.Size = new System.Drawing.Size(74, 17);
       this.DLC6Check.TabIndex = 5;
-      this.DLC6Check.Text = "DLC6";
+      this.DLC6Check.Text = "Raid Boss";
       this.DLC6Check.UseVisualStyleBackColor = true;
       this.DLC6Check.CheckedChanged += new System.EventHandler(this.DLCCheck_CheckedChanged);
       // 

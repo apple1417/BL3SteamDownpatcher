@@ -20,7 +20,7 @@ namespace BL3SteamDownpatcher {
     Geranium = 16,
     Alisma = 32,
     Ixora = 64,
-    DLC6 = 128,
+    Ixora2 = 128,
 
     Base = Exe | Content
   }
@@ -35,7 +35,8 @@ namespace BL3SteamDownpatcher {
       { Depot.Hibiscus, 1232257 },
       { Depot.Geranium, 1233060 },
       { Depot.Alisma, 1233061 },
-      { Depot.Ixora, 1361830 }
+      { Depot.Ixora, 1361830 },
+      { Depot.Ixora2, 1361831 }
     };
 
     private static readonly Dictionary<Depot, string> DLC_INSTALLED_FILES = new Dictionary<Depot, string>() {
@@ -43,7 +44,8 @@ namespace BL3SteamDownpatcher {
       { Depot.Hibiscus, "OakGame/AdditionalContent/Hibiscus/Paks/Hibiscus.pak" },
       { Depot.Geranium, "OakGame/AdditionalContent/Geranium/Paks/Geranium.pak" },
       { Depot.Alisma, "OakGame/AdditionalContent/Alisma/Paks/Alisma.pak" },
-      { Depot.Ixora, "OakGame/AdditionalContent/Ixora/Paks/Ixora.pak" }
+      { Depot.Ixora, "OakGame/AdditionalContent/Ixora/Paks/Ixora.pak" },
+      { Depot.Ixora2, "OakGame/AdditionalContent/Ixora2/Paks/Ixora2.pak" }
     };
 
     // All instances of this are defined in `SteamManagerVersions.cs`
@@ -170,7 +172,7 @@ namespace BL3SteamDownpatcher {
 
     private static HashSet<string> GetAllRemovedDLCFiles(Depot wantedDLC) {
       HashSet<string> allFiles = new HashSet<string>();
-      foreach (Depot dlc in new List<Depot>() { Depot.Dandelion, Depot.Hibiscus, Depot.Geranium, Depot.Alisma }) {
+      foreach (Depot dlc in new List<Depot>() { Depot.Dandelion, Depot.Hibiscus, Depot.Geranium, Depot.Alisma, Depot.Ixora, Depot.Ixora2 }) {
         if (wantedDLC.HasFlag(dlc)) {
           continue;
         }
