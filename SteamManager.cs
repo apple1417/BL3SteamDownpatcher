@@ -191,7 +191,7 @@ namespace BL3SteamDownpatcher {
             }
           }
           if (info.FilesToReplace.ContainsKey(dlc)) {
-            foreach (string file in info.FilesToAdd[dlc]) {
+            foreach (string file in info.FilesToReplace[dlc]) {
               allFiles.Add(file);
             }
           }
