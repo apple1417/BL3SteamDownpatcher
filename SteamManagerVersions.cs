@@ -900,12 +900,15 @@ namespace BL3SteamDownpatcher {
           { Depot.Exe, new HashSet<string>() {
             "OakGame/Binaries/Win64/Borderlands3.exe",
           } },
+          { Depot.Content, new HashSet<string>() {
+            "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
+          } }
         },
 
         FilesToDelete = new Dictionary<Depot, HashSet<string>>() {
           { Depot.Content, new HashSet<string>() {
             "Engine/Binaries/ThirdParty/cohtml/win64/HttpServer.WindowsDesktop.dll",
-          }}
+          } }
         }
       },
     };
