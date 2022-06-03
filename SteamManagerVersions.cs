@@ -911,6 +911,47 @@ namespace BL3SteamDownpatcher {
           } }
         }
       },
+
+      new VersionInfo() {
+        Name = "Playstation Crossplay",
+        ProductVersion = "OAK-PATCHWIN640-320",
+
+        Manifests = new Dictionary<Depot, ulong>() {
+          { Depot.Exe, 4273214703698579670 },
+          { Depot.Content, 4989013067970742733 },
+          { Depot.Dandelion, 9116600370569954686 },
+          { Depot.Hibiscus, 132348831915272916 },
+          { Depot.Geranium, 350750707932598048 },
+          { Depot.Alisma, 5627198090468988485 },
+          { Depot.Ixora, 988244885201248028 },
+          { Depot.Ixora2, 8226097640942912719 },
+        },
+
+        FilesToAdd = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Content, new HashSet<string>() {
+            "OakGame/Content/Paks/pakchunk0-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk3-WindowsNoEditor_17_P.pak",
+            "OakGame/Content/Paks/pakchunk4-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk5-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk85-WindowsNoEditor_18_P.pak",
+            "OakGame/Content/Paks/pakchunk86-WindowsNoEditor_15_P.pak",
+            "OakGame/Content/Paks/pakchunk87-WindowsNoEditor_18_P.pak",
+            "OakGame/Content/Paks/pakchunk88-WindowsNoEditor_17_P.pak",
+            "OakGame/Content/Paks/pakchunk89-WindowsNoEditor_18_P.pak",
+            "OakGame/Content/Paks/pakchunk90-WindowsNoEditor_18_P.pak",
+            "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_18_P.pak",
+          } }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } },
+          { Depot.Content, new HashSet<string>() {
+            "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
+          } }
+        }
+      },
     };
   }
 }
