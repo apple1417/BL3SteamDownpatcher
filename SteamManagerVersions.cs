@@ -480,7 +480,7 @@ namespace BL3SteamDownpatcher {
       },
 
       new VersionInfo() {
-        Name = "Raid Boss",
+        Name = "Vault Card 1",
         ProductVersion = "OAK-PATCHWIN641-227",
 
         Manifests = new Dictionary<Depot, ulong>() {
@@ -949,6 +949,44 @@ namespace BL3SteamDownpatcher {
           } },
           { Depot.Content, new HashSet<string>() {
             "Engine/Binaries/ThirdParty/bifrost/x64/Release/bifrost.dll",
+          } }
+        }
+      },
+
+      new VersionInfo() {
+        Name = "Steam Deck Support",
+        ProductVersion = "OAK-PATCHWIN640-328",
+
+        Manifests = new Dictionary<Depot, ulong>() {
+          { Depot.Exe, 4105029718582187629 },
+          { Depot.Content, 6060000805735071140 },
+          { Depot.Dandelion, 9116600370569954686 },
+          { Depot.Hibiscus, 132348831915272916 },
+          { Depot.Geranium, 350750707932598048 },
+          { Depot.Alisma, 5627198090468988485 },
+          { Depot.Ixora, 988244885201248028 },
+          { Depot.Ixora2,   8226097640942912719 },
+        },
+
+        FilesToAdd = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Content, new HashSet<string>() {
+            "Engine/Binaries/ThirdParty/steamworks/steamv154/win64/steam_api64.dll",
+            "OakGame/Content/Paks/pakchunk0-WindowsNoEditor_20_P.pak",
+            "OakGame/Content/Paks/pakchunk3-WindowsNoEditor_18_P.pak",
+            "OakGame/Content/Paks/pakchunk4-WindowsNoEditor_20_P.pak",
+            "OakGame/Content/Paks/pakchunk5-WindowsNoEditor_20_P.pak",
+            "OakGame/Content/Paks/pakchunk85-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk86-WindowsNoEditor_16_P.pak",
+            "OakGame/Content/Paks/pakchunk87-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk88-WindowsNoEditor_18_P.pak",
+            "OakGame/Content/Paks/pakchunk89-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_19_P.pak",
+          } }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
           } }
         }
       },
