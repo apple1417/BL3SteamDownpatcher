@@ -965,7 +965,7 @@ namespace BL3SteamDownpatcher {
           { Depot.Geranium, 350750707932598048 },
           { Depot.Alisma, 5627198090468988485 },
           { Depot.Ixora, 988244885201248028 },
-          { Depot.Ixora2,   8226097640942912719 },
+          { Depot.Ixora2, 8226097640942912719 },
         },
 
         FilesToAdd = new Dictionary<Depot, HashSet<string>>() {
@@ -981,6 +981,46 @@ namespace BL3SteamDownpatcher {
             "OakGame/Content/Paks/pakchunk88-WindowsNoEditor_18_P.pak",
             "OakGame/Content/Paks/pakchunk89-WindowsNoEditor_19_P.pak",
             "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_19_P.pak",
+          } }
+        },
+
+        FilesToReplace = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Exe, new HashSet<string>() {
+            "OakGame/Binaries/Win64/Borderlands3.exe",
+          } }
+        }
+      },
+
+      new VersionInfo() {
+        Name = "Anniversary Skins",
+        ProductVersion = "OAK-PATCHWIN64-209",
+
+        Manifests = new Dictionary<Depot, ulong>() {
+          { Depot.Exe, 4886068445610784807 },
+          { Depot.Content, 5617306984760466681 },
+          { Depot.Dandelion, 9116600370569954686 },
+          { Depot.Hibiscus, 132348831915272916 },
+          { Depot.Geranium, 350750707932598048 },
+          { Depot.Alisma, 5627198090468988485 },
+          { Depot.Ixora, 988244885201248028 },
+          { Depot.Ixora2, 8226097640942912719 },
+        },
+
+        FilesToAdd = new Dictionary<Depot, HashSet<string>>() {
+          { Depot.Content, new HashSet<string>() {
+            "OakGame/Content/Paks/pakchunk0-WindowsNoEditor_21_P.pak",
+            "OakGame/Content/Paks/pakchunk1-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk3-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk5-WindowsNoEditor_21_P.pak",
+            "OakGame/Content/Paks/pakchunk6-WindowsNoEditor_16_P.pak",
+            "OakGame/Content/Paks/pakchunk12-WindowsNoEditor_11_P.pak",
+            "OakGame/Content/Paks/pakchunk85-WindowsNoEditor_20_P.pak",
+            "OakGame/Content/Paks/pakchunk86-WindowsNoEditor_17_P.pak",
+            "OakGame/Content/Paks/pakchunk87-WindowsNoEditor_20_P.pak",
+            "OakGame/Content/Paks/pakchunk88-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk89-WindowsNoEditor_20_P.pak",
+            "OakGame/Content/Paks/pakchunk90-WindowsNoEditor_19_P.pak",
+            "OakGame/Content/Paks/pakchunk91-WindowsNoEditor_20_P.pak",
           } }
         },
 
